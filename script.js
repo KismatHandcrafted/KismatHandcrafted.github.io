@@ -1,14 +1,13 @@
 
 let promoMessages = [
-  "Free shipping on orders above $50",
   "Thank you for supporting our small business!",
-  "$10 shipping or FREE over $150 in Canada"
+  "$15 shipping or FREE over $150 in Canada"
 ];
 let promoIndex = 0;
 setInterval(() => {
   promoIndex = (promoIndex + 1) % promoMessages.length;
   document.getElementById("promo-text").textContent = promoMessages[promoIndex];
-}, 5000);
+}, 3000);
 
 let slideIndex = 0;
 function showSlides() {
@@ -17,5 +16,5 @@ function showSlides() {
   slideIndex = (slideIndex + 1) % slides.length;
   slides[slideIndex].style.display = "block";
 }
-setInterval(showSlides, 5000);
+setInterval(showSlides, 3000);
 showSlides();
